@@ -616,6 +616,11 @@
     self.addressLabel.userInteractionEnabled = NO;
 
     NSString* frontArrowString = NSLocalizedString(@"►", nil); // create arrow from Unicode char
+    NSString* refreshBtnString = @"\u21BB";
+
+	self.refreshButton = [[UIBarButtonItem alloc] initWithTitle:refreshBtnString style:UIBarButtonItemStylePlain target:self action:@selector(goRefresh:)];
+    self.refreshButton.enabled = YES;
+    self.refreshButton.imageInsets = UIEdgeInsetsZero;
 	
     self.forwardButton = [[UIBarButtonItem alloc] initWithTitle:frontArrowString style:UIBarButtonItemStylePlain target:self action:@selector(goForward:)];
     self.forwardButton.enabled = YES;
@@ -628,7 +633,7 @@
     self.backButton.imageInsets = UIEdgeInsetsZero;
 
     //[self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
-    [self.toolbar setItems:@[self.backButton, flexibleSpaceButton, self.closeButton, fixedSpaceButton]];
+    [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.refreshButton]];
 
 	// Custom Background Color
     self.view.backgroundColor = [UIColor colorWithRed:238.0 / 255.0 green:27.0 / 255.0 blue:46.0 / 255.0 alpha:1]; //[UIColor grayColor];
@@ -837,6 +842,12 @@
 {
     [self.webView goForward];
 }
+
+- (void)goRefresh:(id)sender
+{
+    [self.webView reload];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
