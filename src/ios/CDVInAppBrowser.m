@@ -617,13 +617,14 @@
 
     NSString* frontArrowString = NSLocalizedString(@"►", nil); // create arrow from Unicode char
     NSString* refreshBtnString = @"\u21BB";
-
 	
-//    self.forwardButton = [[UIBarButtonItem alloc] initWithTitle:frontArrowString style:UIBarButtonItemStylePlain target:self action:@selector(goForward:)];
-	self.forwardButton = [[UIBarButtonItem alloc] initWithTitle:refreshBtnString style:UIBarButtonItemStylePlain target:self action:@selector(goRefresh:)];
-
+    self.forwardButton = [[UIBarButtonItem alloc] initWithTitle:frontArrowString style:UIBarButtonItemStylePlain target:self action:@selector(goForward:)];
     self.forwardButton.enabled = YES;
     self.forwardButton.imageInsets = UIEdgeInsetsZero;
+	
+	self.refreshButton = [[UIBarButtonItem alloc] initWithTitle:refreshBtnString style:UIBarButtonItemStylePlain target:self action:@selector(goRefresh:)];
+	self.refreshButton.enabled = YES;
+	self.refreshButton.imageInsets = UIEdgeInsetsZero;		
 
     //NSString* backArrowString = NSLocalizedString(@"◄", nil); // create arrow from Unicode char
     NSString* backArrowString = NSLocalizedString(@"< back", nil); // create back arrow
@@ -632,7 +633,7 @@
     self.backButton.imageInsets = UIEdgeInsetsZero;
 
     //[self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
-    [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
+    [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.refreshButton]];
 
 	// Custom Background Color
     self.view.backgroundColor = [UIColor colorWithRed:238.0 / 255.0 green:27.0 / 255.0 blue:46.0 / 255.0 alpha:1]; //[UIColor grayColor];
