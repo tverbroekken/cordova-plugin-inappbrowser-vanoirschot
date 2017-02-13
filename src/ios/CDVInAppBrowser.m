@@ -580,7 +580,7 @@
     self.toolbar.multipleTouchEnabled = NO;
     self.toolbar.opaque = YES;
     self.toolbar.userInteractionEnabled = YES;
-	self.toolbar.barTintColor = [UIColor colorWithRed:231.0 / 255.0 green:65.0 / 255.0 blue:45.0 / 255.0 alpha:1];
+	self.toolbar.barTintColor = [UIColor colorWithRed:238.0 / 255.0 green:27.0 / 255.0 blue:46.0 / 255.0 alpha:1];
 	self.toolbar.tintColor = [UIColor whiteColor];
 	
     CGFloat labelInset = 5.0;
@@ -630,8 +630,8 @@
     [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
 
 	// Custom Background Color
-    self.view.backgroundColor = [UIColor colorWithRed:231.0 / 255.0 green:65.0 / 255.0 blue:45.0 / 255.0 alpha:1]; //[UIColor grayColor];
-	self.view.tintColor = [UIColor colorWithRed:231.0 / 255.0 green:65.0 / 255.0 blue:45.0 / 255.0 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:238.0 / 255.0 green:27.0 / 255.0 blue:46.0 / 255.0 alpha:1]; //[UIColor grayColor];
+	self.view.tintColor = [UIColor colorWithRed:238.0 / 255.0 green:27.0 / 255.0 blue:46.0 / 255.0 alpha:1];
 
     [self.view addSubview:self.toolbar];
     [self.view addSubview:self.addressLabel];
