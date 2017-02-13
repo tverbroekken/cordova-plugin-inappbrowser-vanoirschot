@@ -628,7 +628,7 @@
     self.backButton.imageInsets = UIEdgeInsetsZero;
 
     //[self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton, self.forwardButton]];
-    [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, self.backButton, fixedSpaceButton]];
+    [self.toolbar setItems:@[self.backButton, flexibleSpaceButton, self.closeButton, fixedSpaceButton]];
 
 	// Custom Background Color
     self.view.backgroundColor = [UIColor colorWithRed:238.0 / 255.0 green:27.0 / 255.0 blue:46.0 / 255.0 alpha:1]; //[UIColor grayColor];
