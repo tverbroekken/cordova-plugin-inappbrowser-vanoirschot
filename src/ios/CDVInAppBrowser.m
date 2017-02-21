@@ -578,7 +578,7 @@
     self.toolbar.contentMode = UIViewContentModeScaleToFill;
     self.toolbar.hidden = NO;
     self.toolbar.multipleTouchEnabled = NO;
-    self.toolbar.opaque = YES;
+    self.toolbar.opaque = NO;
     self.toolbar.userInteractionEnabled = YES;
 	self.toolbar.barTintColor = [UIColor colorWithRed:238.0 / 255.0 green:27.0 / 255.0 blue:46.0 / 255.0 alpha:1];
 	self.toolbar.tintColor = [UIColor whiteColor];
